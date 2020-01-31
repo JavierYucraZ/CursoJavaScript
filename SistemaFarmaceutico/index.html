@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Sistema Farmaceutico</title>
+	<link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+	<header>
+		<h1>Sistema Farmaceutico</h1>
+	</header>
+
+	<main>
+		<section class="contenedor">
+			<div class="contenedorForm">
+				<h2>Ingrese Medicamento</h2>
+				<form id="form-med">
+					<div class="input">
+						<input type="text" id="nombre" placeholder="Nombre Medicamento" 
+						autocomplete="off">
+					</div>
+					<div class="input">
+						<input type="number" id="precio" step="0.01" placeholder="Precio" autocomplete="off">
+					</div>
+					<div class="input">
+						<input type="number" id="fecha" placeholder="Fecha de Vencimiento" autocomplete="off">
+					</div>
+					<p>
+						<input type="submit" class="boton" value="Guardar">
+					</p>
+				</form>
+			</div>
+			<div class="contenedorLista">
+				<h2>Lista de Medicamentos</h2>
+			</div>
+		</section>
+	</main>
+
+<script type="text/javascript" src="script.js"></script>
+</body>
+</html>
