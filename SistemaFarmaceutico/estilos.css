@@ -24,7 +24,7 @@ h1{
 	padding: 15px 25px;
 }
 
-.contenedorForm h2, .contenedorLista h2{
+.contenedorForm h2, #contenedorLista h2{
 	font-size: 25px;
 	font-weight: 100;
 	border-bottom: 1px solid black;
@@ -66,12 +66,12 @@ h1{
 	text-align: center;
 }
 
-.contenedorLista{
+#contenedorLista{
 	margin: 0 50px;
 	padding: 15px 25px;
 }
 
-.contenedorLista h2{
+#contenedorLista h2{
 	width: 350px;
 	text-align: right;
 }
