@@ -48,14 +48,13 @@ class Metodos{
 		//console.log(etiqueta.parentElement.parentElement);
 		
 		if (etiqueta.name == "eliminar") {
-			etiqueta.parentElement.parentElement.remove();
+
+			var confirmacion = confirm('Desea eliminar este registro?');
+			if (confirmacion) {
+				etiqueta.parentElement.parentElement.remove();
+			}
 		}
 	}
-
-	mostrarMensaje(){
-
-	}
-
 }
 
 
