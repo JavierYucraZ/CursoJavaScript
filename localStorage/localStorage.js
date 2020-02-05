@@ -25,6 +25,11 @@ function obtenerInfoLocal(){
 		console.log(persona_objeto.nombre);
 		console.log(persona_objeto.telefono);
 		console.log(persona_objeto.correo);
+
+		document.getElementById('nombre').innerHTML = persona_objeto.nombre;
+		document.getElementById('telefono').innerHTML = persona_objeto.telefono;
+		document.getElementById('correo').innerHTML = persona_objeto.correo;
+
 	}else{
 		console.log('No existe el registro con la llave seleccionada');
 	}

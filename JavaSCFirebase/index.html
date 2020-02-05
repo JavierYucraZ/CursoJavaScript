@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Firebase con JavaScript</title>
+	<meta charset="utf-8">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+</head>
+<body>
+
+	<nav class="navbar bg-info">
+		<ul class="list-inline">
+			<li class="list-inline-item">
+				<h3 class="text-white">Conexion a base de datos en FIREBASE</h3>
+			</li>
+		</ul>
+	</nav>
+
+
+	<main class="container mt-3">
+		<div class="row">
+			<div class="col-6">
+				<div class="card">
+					<div class="card-body border">
+						<div class="card-title">
+							<h4>Formulario CRUD</h4>
+							<!-- CRUD create, read, update, delete
+							ABC altas, bajas, cambios -->
+						</div>
+						<hr>
+						<div class="form-group">
+							<input type="number" class="form-control" id="id" placeholder="ID" autocomplete="off">
+						</div>
+						<div class="form-group">
+							<input type="text" id="nombre" class="form-control" placeholder="Nombre" autocomplete="off">
+						</div>
+						<div class="form-group">
+							<input class="form-control" type="text" id="apellido" placeholder="Apellido" autocomplete="off">
+						</div>
+						<div class="form-group">
+							<button onclick="agregar()" class="btn btn-success">Agregar</button>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="col-6">
+				<table class="table table-bordered text-center">
+					<thead class="thead-dark">
+						<th>ID</th>
+						<th>Nombre</th>
+						<th>Apellido</th>
+						<th>Acciones</th>
+					</thead>
+					<tbody id="CargarDatos">
+						
+					</tbody>
+				</table>
+			</div>
+		</div>
+	</main>
+
+
+
+<script src="https://www.gstatic.com/firebasejs/7.8.0/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.8.0/firebase-database.js"></script>
+
+<script type="text/JavaScript" src="script.js"></script>
+</body>
+</html>
