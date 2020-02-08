@@ -1,4 +1,4 @@
-// Your web app's Firebase configuration
+  // Your web app's Firebase configuration
   var firebaseConfig = {
     apiKey: "AIzaSyCHTbw9GkD6wrfqGW_5cKzfCrKTyQTx7gw",
     authDomain: "dbjavascript-f4052.firebaseapp.com",
@@ -18,22 +18,30 @@ function agregar(){
   var apellido = getID('apellido').value;
 
   if (id == "") {
-    alert('Debe ingresar un ID');
+    getID('subID').style.display = "block";
+    getID('subID').style.color = "red";
     getID('id').focus();
   }else if (nombre == "") {
-    alert("Debe ingresar su nombre");
+    getID('subID').style.display = "none";
+    getID('subNombre').style.display = "block";
+    getID('subNombre').style.color = "red";
     getID('nombre').focus();
   }else if(apellido == ""){
-    alert('Debe ingresar su apellido');
+    getID('subNombre').style.display = "none";
+    getID('subApellido').style.display = "block";
+    getID('subApellido').style.color = "red";
     getID('apellido').focus();
   }else{
+
+    getID('subApellido').style.display = "none";
     console.log(id, nombre, apellido);
 
     var persona = crearObjeto(id, nombre, apellido);
     var agregarBD = firebase.database().ref('usuarios/'+id);
     agregarBD.set(persona);
 
-    alert('La informacion se ha guardado correctamente');
+    // alert('La informacion se ha guardado correctamente');
+    mostrarMensaje('La informacion se ha guardado correctamente', 'success');
 
     getID('id').value = "";
     getID('nombre').value = "";
@@ -92,14 +100,39 @@ function eliminar( id ){
 
   if (confirm('Desea eliminar este registro?')) {
     usuario.remove();
-    location.reload();
   }
+
+  mostrarMensaje('El registro se ha eliminado correctamente', 'danger');
+  setTimeout(function(){
+    location.reload();
+  },2000);
 
 }
 
 function editar( id, nombre, apellido){
   
-  console.log("click en editar");
-  // var usuario = firebase.database().ref('usuarios/'+id);
-  // usuario.remove();
+  //console.log("click en editar");
+  getID('id').value = id;
+  getID('nombre').value = nombre;
+  getID('apellido').value = apellido;
+
+  mostrarMensaje('Editando la informacion de : '+nombre, 'warning');
+
 }
+
+function mostrarMensaje( mensaje, clase ){
+  var main = document.createElement('div');
+  main.className = 'alert alert-'+clase+' text-center';
+  main.appendChild(document.createTextNode(mensaje));
+
+  var container = document.querySelector('.container');
+  var row = document.querySelector('.row');
+
+  container.insertBefore(main, row);
+
+  setTimeout(function(){
+    document.querySelector('.alert').remove();
+  }, 3000);
+
+}
+

@@ -17,6 +17,7 @@
 
 
 	<main class="container mt-3">
+		<!-- <div class="alert alert-warning text-center">Datos guardados satisfactoriamente</div> -->
 		<div class="row">
 			<div class="col-6">
 				<div class="card">
@@ -29,12 +30,15 @@
 						<hr>
 						<div class="form-group">
 							<input type="number" class="form-control" id="id" placeholder="ID" autocomplete="off">
+							<small id="subID" style="display: none"><i>Debe ingresar un ID</i></small>
 						</div>
 						<div class="form-group">
 							<input type="text" id="nombre" class="form-control" placeholder="Nombre" autocomplete="off">
+							<small id="subNombre" style="display: none"><i>Debe ingresar su Nombre</i></small>
 						</div>
 						<div class="form-group">
 							<input class="form-control" type="text" id="apellido" placeholder="Apellido" autocomplete="off">
+							<small id="subApellido" style="display: none"><i>Debe ingresar su Apellido</i></small>
 						</div>
 						<div class="form-group">
 							<button onclick="agregar()" class="btn btn-success">Agregar</button>
