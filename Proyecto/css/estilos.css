@@ -1,0 +1,83 @@
+:root{
+	--color1 : rgb(219,144,0.5);	
+	--color2 : rgba(23,180,83,0.07);
+	--color3 : rgba(11,194,211,0.6);
+	--fondo : #f2f2f2;
+	--navBar : rgb(24,150,255);
+	--titulos : 33px;
+	--subtitulos : 20px;
+	--margenes : 50px;
+	--espacios : 10px;
+	--espacios-contenidos : 45px;
+}
+
+*{
+	margin: 0;
+	padding: 0;
+	scroll-behavior: smooth;
+}
+
+body{
+	background: var(--fondo);
+}
+
+header{
+	width: 100%;
+	height: 90vh;
+	background: linear-gradient(to bottom, 
+		rgba(211,135,20,0.6),
+		rgba(29,241,271,0.6),
+		rgba(7,109,105,0.45)), url(../imagenes/fondo.jpg) fixed;
+	background-size: cover;
+	background-position: center;
+}
+
+#nav{
+	width: 100%;
+	margin: auto;
+	box-shadow: 0 0 10px 0 rgba(0,0,0,0.9);
+}
+
+.contenedor-nav{
+	height: 10vh;
+	background: var(--navBar);
+}
+
+.contenedor-nav #enlaces{
+	float: right;
+	margin-right: 70px;
+}
+
+nav #enlaces a{
+	display: inline-block;
+	text-decoration: none;
+	margin-left: 17px;
+	padding: 5px 0;
+	font-size: 17px;
+	font-weight: 300;
+	text-align: center;
+	color: white;
+}
+
+nav #enlaces a:hover{
+	border-bottom: 1px solid white;
+}
+
+.textos{
+	width: 100%;
+	height: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+}
+
+.textos h1{
+	font-size: 80px;
+}
+
+.textos h2{
+	font-size: 30px;
+}
+
+
