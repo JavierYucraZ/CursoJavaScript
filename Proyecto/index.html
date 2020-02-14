@@ -7,6 +7,7 @@
 	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
 	<link rel="stylesheet" href="css/estilos.css">
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet"> 
 </head>
 <body>
 
@@ -20,11 +21,11 @@
 	<nav id="nav">
 		<div class="contenedor-nav">
 			<div class="enlaces" id="enlaces">
-				<a href="" id="enlace-inicio">Inicio</a>
-				<a href="" id="enlace-equipo">Equipo</a>
-				<a href="" id="enlace-servicio">Servicio</a>
-				<a href="" id="enlace-trabajo">Trabajo</a>
-				<a href="" id="enlace-contacto">Contacto</a>
+				<a href="#" id="enlace-inicio">Inicio</a>
+				<a href="#" id="enlace-equipo">Equipo</a>
+				<a href="#" id="enlace-servicio">Servicio</a>
+				<a href="#" id="enlace-trabajo">Trabajo</a>
+				<a href="#" id="enlace-contacto">Contacto</a>
 			</div>
 		</div>
 	</nav>
@@ -102,10 +103,10 @@
 			<p class="subrayado">Hacemos de algo simple, algo extraordinario</p>
 			<div class="botones-trabajos">
 				<ul>
-					<li class="filtro activo">Todos</li>
-					<li class="filtro">Dise&ntilde;o</li>
-					<li class="filtro">Programacion</li>
-					<li class="filtro">Marketing</li>
+					<li class="filtro activo" data-nombre="todos">Todos</li>
+					<li class="filtro" data-nombre="disenio">Dise&ntilde;o</li>
+					<li class="filtro" data-nombre="programacion">Programacion</li>
+					<li class="filtro" data-nombre="marketing">Marketing</li>
 				</ul>
 			</div>
 
@@ -199,11 +200,24 @@
 	<footer id="contacto">
 		<div class="footer contenedor">
 			<div class="iconos">
-				
+				<a href="https://www.youtube.com" target="_blank">
+					<i class="fa fa-youtube-play" aria-hidden="true"></i>
+				</a>
+				<a href="https://www.facebook.com" target="_blank">
+					<i class="fa fa-facebook-square" aria-hidden="true"></i>	
+				</a>
+				<a href="https://www.github.com" target="_blank">
+					<i class="fa fa-github-square" aria-hidden="true"></i>	
+				</a>
 			</div>
 		</div>
 		<p class="contenedor">La pasion e innovacion es lo que nos distingue del resto</p>
 	</footer>
 	
+<script type="text/javascript" src="js/menuPegajoso.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script type="text/javascript" src="js/funciones.js"></script>
+
+
 </body>
 </html>
