@@ -1,3 +1,8 @@
+$(document).ready(function(){
+	$('#onload').fadeOut(1500);
+	$('body').removeClass('oculto');
+});
+
 var equipo = $('#equipo').offset().top, 
 	servicio = $('#servicios').offset().top,
 	trabajo = $('#trabajo').offset().top,
@@ -40,4 +45,5 @@ $(function(){
 		}
 	});
 });
+
 
